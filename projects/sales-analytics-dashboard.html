@@ -7,7 +7,7 @@
   <meta name="description" content="Case study: a privacy-first sales analytics dashboard for small businesses. Python, Streamlit, RFM + K-Means segmentation, HMAC-SHA256 pseudonymization, RBAC, CI/CD, and Docker." />
   <meta property="og:title" content="Interactive Sales Analytics Dashboard — Case Study" />
   <meta property="og:description" content="A privacy-first decision-support system for small retailers: 14 modules, 351 tests, 90.3% coverage, security and ethics by design." />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='none' stroke='%239c4a10' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 5V21C13 24.5 10.8 27 7.7 27C4.5 27 2.5 24.5 2.5 21C2.5 17.5 4.5 15 7.7 15C10.8 15 13 17.5 13 21'/%3E%3Cpath d='M18 27V5H22.5C26 5 28 6.7 28 9.5C28 12.3 26 14 22.5 14H18M18 14H23C27 14 29.5 16.2 29.5 20.5C29.5 24.8 27 27 23 27H18'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 24h5V10h6v14h4c2-8 5-11 11-12' fill='none' stroke='%239c4a10' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,13 +22,7 @@
     <div class="container header-inner">
       <a class="brand" href="../index.html" aria-label="Drew Brown — home">
         <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <path d="M13 5 V21 C13 24.5 10.8 27 7.7 27 C4.5 27 2.5 24.5 2.5 21 C2.5 17.5 4.5 15 7.7 15 C10.8 15 13 17.5 13 21"
-          fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
-          />
-          <path
-          d="M18 27 V5 H22.5 C26 5 28 6.7 28 9.5 C28 12.3 26 14 22.5 14 H18 H23 C27 14 29.5 16.2 29.5 20.5 C29.5 24.8 27 27 23 27 H18"
-          fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
-          />
+          <path d="M3 24h5V10h6v14h4c2-8 5-11 11-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <span class="brand-name">Drew Brown</span>
       </a>
@@ -77,7 +71,7 @@
           </div>
           <div>
             <dt>Timeline</dt>
-            <dd>June — August 2026</dd>
+            <dd>July — August 2026</dd>
           </div>
           <div>
             <dt>License</dt>
@@ -291,17 +285,39 @@
           <span class="index-num">05 — DEMO</span>
         </div>
         <div class="media-placeholders">
-          <div class="placeholder-card reveal">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m10 9.5 5 2.5-5 2.5z"/></svg>
-            <h3>Demo walkthrough</h3>
-            <p>A recorded demonstration of ingestion, sign-in, and the four dashboard tabs is being produced and will be embedded here.</p>
-            <span class="chip chip-accent">Coming soon</span>
+          <div class="reveal">
+            <a class="video-card" href="https://uopeople-my.sharepoint.com/:v:/g/personal/drewbrown_my_uopeople_edu/IQCOc8bOq3ngSoG3bDQ7ynUBAbmevzXBe8wli4TlLVJtTcI?e=uEdWUC" target="_blank" rel="noopener noreferrer" aria-label="Watch the demo walkthrough video (opens SharePoint, UoPeople sign-in required)">
+              <img src="../assets/video-poster.jpg" alt="Title frame of the demo video: Interactive Sales Analytics Dashboard for Small Businesses, presented by Drew Brown" loading="lazy" width="1280" height="720" />
+              <span class="video-card-overlay">
+                <span class="video-play" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+                </span>
+              </span>
+            </a>
+            <p class="media-caption">Demo walkthrough — ingestion, sign-in, and all four tabs. Opens on SharePoint; UoPeople sign-in required.</p>
           </div>
-          <div class="placeholder-card reveal">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.5-3.5L11 18"/></svg>
-            <h3>Dashboard screenshots</h3>
-            <p>Role-scoped views of the Revenue, Products, Customers, and Time-trends tabs will be added after the final demo pass.</p>
-            <span class="chip chip-accent">Coming soon</span>
+          <div class="reveal">
+            <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Dashboard screenshots">
+              <div class="carousel-frame">
+                <img class="is-active" src="../assets/screenshots/shot-1.jpg" alt="Revenue tab with KPI cards for gross revenue, net revenue, orders, and average order value, plus methodology captions" width="1600" height="842" />
+                <img src="../assets/screenshots/shot-2.jpg" alt="Products tab showing a top-products-by-revenue bar chart with returns excluded from ranking" loading="lazy" width="1600" height="754" />
+                <img src="../assets/screenshots/shot-3.jpg" alt="Time trends tab showing monthly net revenue as a line chart" loading="lazy" width="1600" height="810" />
+                <img src="../assets/screenshots/shot-4.jpg" alt="Time trends tab showing net revenue by weekday as a bar chart" loading="lazy" width="1600" height="820" />
+                <img src="../assets/screenshots/shot-5.jpg" alt="Customers tab while signed out, showing the graceful permission message for role-scoped views" loading="lazy" width="1600" height="740" />
+                <img src="../assets/screenshots/shot-6.jpg" alt="Customers tab signed in as analyst, with RFM segment filters and sidebar login unlocked" loading="lazy" width="1600" height="820" />
+              </div>
+              <p class="carousel-caption" data-carousel-caption aria-live="polite">Revenue tab — KPI summary with methodology captions</p>
+              <div class="carousel-controls">
+                <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous screenshot">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+                </button>
+                <span class="carousel-count" data-carousel-count>1 / 6</span>
+                <button type="button" class="carousel-btn" data-carousel-next aria-label="Next screenshot">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+              </div>
+            </div>
+            <p class="media-caption">Dashboard screenshots — Revenue, Products, and Time-trends tabs, plus the Customers tab signed out and signed in.</p>
           </div>
         </div>
       </div>
@@ -328,7 +344,7 @@
           </p>
         </div>
         <ul class="doc-links reveal" role="list">
-          <li><a href="../assets/Capstone_Technical_Report.pdf" target="_blank" rel="noopener noreferrer"><span>Technical report — working draft (PDF)</span><span class="doc-path">58 pages</span></a></li>
+          <li><a href="../assets/Capstone_Technical_Report_Draft.pdf" target="_blank" rel="noopener noreferrer"><span>Technical report — working draft (PDF)</span><span class="doc-path">APA · MSIT 5910</span></a></li>
           <li><a href="https://github.com/soyabeansoupluvr/sales-analytics-dashboard/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer"><span>v1.0.0 release — GPG-signed capstone submission</span><span class="doc-path">releases/v1.0.0</span></a></li>
           <li><a href="https://github.com/soyabeansoupluvr/sales-analytics-dashboard/actions" target="_blank" rel="noopener noreferrer"><span>CI runs — pytest, flake8, black, gitleaks</span><span class="doc-path">actions</span></a></li>
           <li><a href="https://github.com/soyabeansoupluvr/sales-analytics-dashboard/blob/main/docs/input_schema.md" target="_blank" rel="noopener noreferrer"><span>Input schema contract</span><span class="doc-path">docs/input_schema.md</span></a></li>
