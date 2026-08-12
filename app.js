@@ -65,6 +65,40 @@
     });
   }
 
+  /* Screenshot carousel */
+  var carousel = document.querySelector('[data-carousel]');
+  if (carousel) {
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-frame img'));
+    var captionEl = carousel.querySelector('[data-carousel-caption]');
+    var countEl = carousel.querySelector('[data-carousel-count]');
+    var captions = [
+      'Revenue tab — KPI summary with methodology captions',
+      'Products tab — top products by revenue, returns excluded from ranking',
+      'Time trends — monthly net revenue across the dataset window',
+      'Time trends — net revenue by day of week',
+      'Customers tab, signed out — role-scoped views return a graceful permission message',
+      'Customers tab as analyst — RFM segment filters unlocked after sidebar login'
+    ];
+    var idx = 0;
+    function show(i) {
+      idx = (i + slides.length) % slides.length;
+      slides.forEach(function (img, n) {
+        img.classList.toggle('is-active', n === idx);
+      });
+      if (captionEl) captionEl.textContent = captions[idx] || '';
+      if (countEl) countEl.textContent = (idx + 1) + ' / ' + slides.length;
+    }
+    var prev = carousel.querySelector('[data-carousel-prev]');
+    var next = carousel.querySelector('[data-carousel-next]');
+    if (prev) prev.addEventListener('click', function () { show(idx - 1); });
+    if (next) next.addEventListener('click', function () { show(idx + 1); });
+    carousel.setAttribute('tabindex', '0');
+    carousel.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(idx + 1); }
+    });
+  }
+
   /* Year */
   var y = document.querySelector('[data-year]');
   if (y) y.textContent = String(new Date().getFullYear());
